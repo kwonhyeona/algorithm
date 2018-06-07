@@ -2,7 +2,7 @@
 알고리즘 문제풀이 저장소입니다.
 
 ## 사이트 종류
-`[백준](https://github.com/kwonhyeona/algorithm/tree/master/baekjoon)`
+[백준](https://www.acmicpc.net/)
 * [1000](https://github.com/kwonhyeona/algorithm/blob/master/baekjoon/boj1000.java)
 * [1001](https://github.com/kwonhyeona/algorithm/blob/master/baekjoon/boj1001.java)
 * [1002](https://github.com/kwonhyeona/algorithm/blob/master/baekjoon/boj1002.java)
@@ -68,7 +68,7 @@
 * [14919](https://github.com/kwonhyeona/algorithm/blob/master/baekjoon/boj14919.java)
 
 
-`[codeground](https://github.com/kwonhyeona/algorithm/tree/master/codeground)`
+[codeground](https://www.codeground.org/)
 * [exercise1](https://github.com/kwonhyeona/algorithm/blob/master/codeground/exercise1.java)
 * [exercise2](https://github.com/kwonhyeona/algorithm/blob/master/codeground/exercise2.java)
 * [exercise3](https://github.com/kwonhyeona/algorithm/blob/master/codeground/exercise3.java)
@@ -77,7 +77,7 @@
 * [exercise6](https://github.com/kwonhyeona/algorithm/blob/master/codeground/exercise6.java)
 
 
-`[codility](https://github.com/kwonhyeona/algorithm/tree/master/codility)`
+[codility](https://app.codility.com/programmers/)
 * [BinaryGap](https://github.com/kwonhyeona/algorithm/blob/master/codility/BinaryGap.java)
 * [CyclicRotation](https://github.com/kwonhyeona/algorithm/blob/master/codility/CyclicRotation.java)
 * [FrogJmp](https://github.com/kwonhyeona/algorithm/blob/master/codility/FrogJmp.java)
@@ -86,4 +86,4 @@
 * [TapeEqual](https://github.com/kwonhyeona/algorithm/blob/master/codility/TapeEqual.java)
 
 
-`[SW Expert Academy](https://github.com/kwonhyeona/algorithm/tree/master/samsungSW)`
+[SW Expert Academy](https://swexpertacademy.com/main/main.do)
