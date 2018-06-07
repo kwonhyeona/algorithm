@@ -2,7 +2,7 @@
 알고리즘 문제풀이 저장소입니다.
 
 ## 사이트 종류
-[백준](https://www.acmicpc.net/)
+[baekjoon](https://www.acmicpc.net/)
 * [1000](https://github.com/kwonhyeona/algorithm/blob/master/baekjoon/boj1000.java)
 * [1001](https://github.com/kwonhyeona/algorithm/blob/master/baekjoon/boj1001.java)
 * [1002](https://github.com/kwonhyeona/algorithm/blob/master/baekjoon/boj1002.java)
