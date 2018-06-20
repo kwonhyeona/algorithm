@@ -12,7 +12,7 @@ public class boj14502 {
     static int N, M, MAX = Integer.MIN_VALUE, safeAreaCount = 0;
     static int[][] map, cloneMap;
     static ArrayList<String> wall = new ArrayList<>();
-    static Queue<Pos> queue = new LinkedList<>();
+    static Queue<Node> queue = new LinkedList<>();
     static int[] dx = {-1, 0, 1, 0}, dy = {0, 1, 0, -1};
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -71,7 +71,7 @@ public class boj14502 {
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
                 if (cloneMap[i][j] != 1) cloneMap[i][j] = map[i][j];
-                if (map[i][j] == 2) queue.offer(new Pos(i, j));
+                if (map[i][j] == 2) queue.offer(new Node(i, j));
             }
         }
 
@@ -89,7 +89,7 @@ public class boj14502 {
         while(!queue.isEmpty()) {
             int length = queue.size();
             for (int i = 0; i < length; i++) {
-                Pos p = queue.poll();
+                Node p = queue.poll();
                 for (int j = 0; j < 4; j++) {
                     int sx = p.x + dx[j];
                     int sy = p.y + dy[j];
@@ -97,21 +97,11 @@ public class boj14502 {
                     if (sx >= 0 && sx < N && sy >= 0&& sy < M && cloneMap[sx][sy] == 0) {
                         cloneMap[sx][sy] = 2;
                         result--;
-                        queue.add(new Pos(sx, sy));
+                        queue.add(new Node(sx, sy));
                     }
                 }
             }
         }
         MAX = Math.max(MAX, result);
-    }
-}
-
-class Pos {
-    int x;
-    int y;
-
-    public Pos(int x, int y) {
-        this.x = x;
-        this.y = y;
     }
 }

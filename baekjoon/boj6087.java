@@ -64,9 +64,7 @@ public class boj6087 {
     }
 }
 
-class Node1 {
-    int x;
-    int y;
+class Node1 extends Node {
     Node1 previous;
     int mirror;
 

@@ -18,13 +18,13 @@ public class boj2573 {
         M = Integer.parseInt(st.nextToken());
         N = Integer.parseInt(st.nextToken());
         map = new int[M][N];
-        Queue<Ice> iceberg = new LinkedList<>();
+        Queue<Point> iceberg = new LinkedList<>();
 
         for (int i = 0; i < M; i++) {
             st = new StringTokenizer(br.readLine());
             for (int j = 0; j < N; j++) {
                 map[i][j] = Integer.parseInt(st.nextToken());
-                if (map[i][j] != 0) iceberg.add(new Ice(i, j, map[i][j]));
+                if (map[i][j] != 0) iceberg.add(new Point(i, j, map[i][j]));
                 total += map[i][j];
             }
         }
@@ -33,14 +33,14 @@ public class boj2573 {
         bw.flush();
     }
 
-    private static int melt (Queue<Ice> iceberg) {
+    private static int melt (Queue<Point> iceberg) {
         int year = 0;
         while (!iceberg.isEmpty()) {
             if (total == 0) return 0;
             year++;
             int length = iceberg.size();
             for (int i = 0; i < length; i++) {
-                Ice node = iceberg.poll();
+                Point node = iceberg.poll();
                 int count = 0;
                 for (int j = 0; j < 4; j++) {
                     int sx = node.x + dx[j];
@@ -54,7 +54,7 @@ public class boj2573 {
                 iceberg.add(node);
             }
             for (int i = 0; i < length; i++) {
-                Ice node = iceberg.poll();
+                Point node = iceberg.poll();
                 map[node.x][node.y] = node.count;
                 if (node.count != 0) iceberg.add(node);
             }
@@ -67,8 +67,8 @@ public class boj2573 {
         return year;
     }
 
-    private static boolean checkDivision (Ice first, int size) {
-        Queue<Ice> q = new LinkedList<>();
+    private static boolean checkDivision (Point first, int size) {
+        Queue<Point> q = new LinkedList<>();
         visited = new boolean[M][N];
         visited[first.x][first.y] = true;
         q.add(first);
@@ -77,13 +77,13 @@ public class boj2573 {
         while (!q.isEmpty()) {
             int length = q.size();
             for (int i = 0; i < length; i++) {
-                Ice ice = q.poll();
+                Point ice = q.poll();
                 for (int j = 0; j < 4; j++) {
                     int sx = ice.x + dx[j];
                     int sy = ice.y + dy[j];
                     if (sx >= 0 && sx < M && sy >= 0 && sy < N && !visited[sx][sy] && map[sx][sy] != 0) {
                         count++;
-                        q.add(new Ice(sx, sy));
+                        q.add(new Point(sx, sy));
                         visited[sx][sy] = true;
                     }
                 }
@@ -91,20 +91,5 @@ public class boj2573 {
         }
 
         return (count != size);
-    }
-}
-
-class Ice {
-    int x, y, count;
-
-    public Ice(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-
-    public Ice(int x, int y, int count) {
-        this.x = x;
-        this.y = y;
-        this.count = count;
     }
 }
