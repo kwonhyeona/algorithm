@@ -26,13 +26,14 @@ public class boj13460 {
 
         for (int i = 0; i < N; i++) {
             st = new StringTokenizer(br.readLine());
+            String in = st.nextToken();
             for (int j = 0; j < M; j++) {
-                String in = st.nextToken();
-                switch (in) {
-                    case "R": beadPosition.setRedX(i); beadPosition.setRedY(j); break;
-                    case "B": beadPosition.setBlueX(i); beadPosition.setBlueY(j); break;
-                    case "0": holeX = i; holeY = j; break;
-                    case "#":  map[i][j] = 1; break;
+                char cha = in.charAt(j);
+                switch (cha) {
+                    case 'R': beadPosition.setRedX(i); beadPosition.setRedY(j); break;
+                    case 'B': beadPosition.setBlueX(i); beadPosition.setBlueY(j); break;
+                    case '0': holeX = i; holeY = j; break;
+                    case '#':  map[i][j] = 1; break;
                 }
             }
             bfs();
