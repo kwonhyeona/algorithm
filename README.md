@@ -64,6 +64,7 @@
 * [14501](https://github.com/kwonhyeona/algorithm/blob/master/baekjoon/boj14501.java)
 * [10226](https://github.com/kwonhyeona/algorithm/blob/master/baekjoon/boj10226.java)
 * [10998](https://github.com/kwonhyeona/algorithm/blob/master/baekjoon/boj10998.java)
+* [11726](https://github.com/kwonhyeona/algorithm/blob/master/baekjoon/boj11726.java)
 * [13235](https://github.com/kwonhyeona/algorithm/blob/master/baekjoon/boj13235.java)
 * [13448](https://github.com/kwonhyeona/algorithm/blob/master/baekjoon/boj13448.java)
 * [133458](https://github.com/kwonhyeona/algorithm/blob/master/baekjoon/boj13458.java)
